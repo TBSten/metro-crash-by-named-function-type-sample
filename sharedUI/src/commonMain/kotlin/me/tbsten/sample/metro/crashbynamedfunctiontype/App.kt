@@ -32,6 +32,9 @@ fun App(
         createGraph<AppGraph>()
     }
 
+    appGraph.authDoSomething.invoke()
+    appGraph.noauthDoSomething.invoke()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
