@@ -14,9 +14,11 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import crash_by_named_function_type.sharedui.generated.resources.*
+import dev.zacsweers.metro.createGraph
 import me.tbsten.sample.metro.crashbynamedfunctiontype.theme.AppTheme
 import me.tbsten.sample.metro.crashbynamedfunctiontype.theme.LocalThemeIsDark
 import kotlinx.coroutines.isActive
+import me.tbsten.sample.metro.crashbynamedfunctiontype.crashsample.AppGraph
 import org.jetbrains.compose.resources.Font
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
@@ -26,6 +28,10 @@ import org.jetbrains.compose.resources.vectorResource
 fun App(
     onThemeChanged: @Composable (isDark: Boolean) -> Unit = {}
 ) = AppTheme(onThemeChanged) {
+    val appGraph = remember {
+        createGraph<AppGraph>()
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
