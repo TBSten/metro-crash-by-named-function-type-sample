@@ -100,3 +100,7 @@ Caused by: org.jetbrains.kotlin.utils.exceptions.KotlinIllegalArgumentExceptionW
 	at org.jetbrains.kotlin.fir.resolve.transformers.FirSupertypeResolverTransformer.transformFile(FirSupertypesResolution.kt:65)
 	... 42 more
 ```
+
+## Solution
+
+Updating to version 0.12.0-SNAPSHOT means @Named will no longer function, but it will no longer crash.
