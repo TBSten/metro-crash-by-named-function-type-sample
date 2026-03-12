@@ -3,7 +3,7 @@ rootProject.name = "Crash-by-Named-function-type"
 pluginManagement {
     repositories {
         google {
-            content { 
+            content {
               	includeGroupByRegex("com\\.android.*")
               	includeGroupByRegex("com\\.google.*")
               	includeGroupByRegex("androidx.*")
@@ -12,13 +12,14 @@ pluginManagement {
         }
         gradlePluginPortal()
         mavenCentral()
+        maven("https://central.sonatype.com/repository/maven-snapshots/")
     }
 }
 
 dependencyResolutionManagement {
     repositories {
         google {
-            content { 
+            content {
               	includeGroupByRegex("com\\.android.*")
               	includeGroupByRegex("com\\.google.*")
               	includeGroupByRegex("androidx.*")
@@ -26,6 +27,7 @@ dependencyResolutionManagement {
             }
         }
         mavenCentral()
+        maven("https://central.sonatype.com/repository/maven-snapshots/")
     }
 }
 include(":sharedUI")
